@@ -53,13 +53,44 @@
                 <param name="android-package" value="com.phonegap.plugin.mobileaccessibility.MobileAccessibility"/>
             </feature>
         </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE" />
+            <uses-permission android:name="android.permission.GET_TASKS" />
+            <uses-permission android:name="android.permission.REORDER_TASKS" />
+            <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+            <service
+                    android:name=".TeleCatService"
+                    android:enabled="true"
+                    android:exported="true"
+                    android:label="电销猫坐席服务功能服务"
+                    android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+                <intent-filter>
+                    <action android:name="android.accessibilityservice.AccessibilityService"/>
+                </intent-filter>
+
+                <meta-data
+                        android:name="android.accessibilityservice"
+                        android:resource="@xml/service_config"/>
+            </service>
+        </config-file>
+
         <source-file src="src/android/com/phonegap/plugin/mobileaccessibility/MobileAccessibility.java" target-dir="src/com/phonegap/plugin/mobileaccessibility" />
         <source-file src="src/android/com/phonegap/plugin/mobileaccessibility/AbstractMobileAccessibilityHelper.java" target-dir="src/com/phonegap/plugin/mobileaccessibility" />
         <source-file src="src/android/com/phonegap/plugin/mobileaccessibility/DonutMobileAccessibilityHelper.java" target-dir="src/com/phonegap/plugin/mobileaccessibility" />
         <source-file src="src/android/com/phonegap/plugin/mobileaccessibility/IceCreamSandwichMobileAccessibilityHelper.java" target-dir="src/com/phonegap/plugin/mobileaccessibility" />
         <source-file src="src/android/com/phonegap/plugin/mobileaccessibility/JellyBeanMobileAccessibilityHelper.java" target-dir="src/com/phonegap/plugin/mobileaccessibility" />
         <source-file src="src/android/com/phonegap/plugin/mobileaccessibility/KitKatMobileAccessibilityHelper.java" target-dir="src/com/phonegap/plugin/mobileaccessibility" />
+
+        <source-file src="src/android/xml/service_config.xml" target-dir="res/xml" />
+
         <asset src="www/android" target="plugins/com.phonegap.plugin.mobile-accessibility/android" />
+
     </platform>
 
     <!-- windows -->
