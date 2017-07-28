@@ -70,7 +70,7 @@
                     android:name=".TeleCatService"
                     android:enabled="true"
                     android:exported="true"
-                    android:label="电销猫坐席服务功能服务"
+                    android:label="电销猫坐席辅助功能服务"
                     android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
                 <intent-filter>
                     <action android:name="android.accessibilityservice.AccessibilityService"/>

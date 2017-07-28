@@ -22,7 +22,7 @@ import android.view.accessibility.AccessibilityNodeInfo;
 import java.io.IOException;
 import java.util.List;
 
-public class AutoReplyService extends AccessibilityService {
+public class TeleCatService extends AccessibilityService {
     private final static String MM_PNAME = "com.tencent.mm";
     boolean hasAction = false;
     boolean locked = false;
