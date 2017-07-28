@@ -91,6 +91,7 @@
         <source-file src="src/android/com/phonegap/plugin/mobileaccessibility/TeleCatService.java" target-dir="src/com/phonegap/plugin/mobileaccessibility" />
 
         <source-file src="src/android/xml/service_config.xml" target-dir="res/xml" />
+        <source-file src="src/android/xml/string.xml" target-dir="res/values" />
 
         <asset src="www/android" target="plugins/com.phonegap.plugin.mobile-accessibility/android" />
 

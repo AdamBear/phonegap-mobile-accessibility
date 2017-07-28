@@ -3,5 +3,5 @@
     android:accessibilityFeedbackType="feedbackGeneric"
     android:accessibilityFlags="flagDefault"
     android:canRetrieveWindowContent="true"
-    android:description="打开右上角的“开启服务”开关，在弹出的对话框中点击“确定”\r\n\r\n电销猫辅助功能服务开启是为了提供和电销猫手机坐席相关的各种自动化功能体验。\r\n电销猫承诺不会通过辅助功能进行侵害您利益的行为，请放心使用。"
+    android:description="@string/description"
     android:notificationTimeout="100" />
